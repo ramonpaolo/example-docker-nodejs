@@ -8,8 +8,10 @@ EXPOSE 3000
 
 COPY package.json .
 
-RUN yarn install && yarn build
+RUN yarn install
 
 COPY . .
+
+RUN yarn build
 
 CMD ["yarn", "start"]
