@@ -8,7 +8,7 @@ EXPOSE 3000
 
 COPY package.json .
 
-RUN yarn install
+RUN yarn install && yarn build
 
 COPY . .
 
